@@ -1,3 +1,5 @@
+//used in mongoDB need to convert it to mysql
+
 import Post from '../models/post';
 import cuid from 'cuid';
 import slug from 'limax';
