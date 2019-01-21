@@ -1,0 +1,16 @@
+// {
+//   "presets": [["react", "es2015", "stage-0"],["env"]],
+//   "plugins": ["react-hot-loader/babel", "transform-object-rest-spread"],
+//   "env": {
+//     "production": {
+//       "presets": ["es2015", "react", "react-optimize", "es2015-native-modules", "stage-0"]
+//     }
+//   }
+// }
+
+{
+  "presets": [
+    ["react"], ["env"]
+  ],
+  "plugins": ["transform-object-rest-spread"]
+}
