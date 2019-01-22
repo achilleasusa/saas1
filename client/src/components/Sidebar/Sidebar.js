@@ -90,7 +90,6 @@ class Sidebar extends Component {
           { isExternal(url) ?
             <RsNavLink href={url} className={classes.link} active>
               <i className={classes.icon}></i>{item.name}{badge(item.badge)}
-              {/* <FontAwesomeIcon icon="igloo" style={{marginRight:5}}/>{item.name}{badge(item.badge)} */}
             </RsNavLink>
             :
             <NavLink to={url} className={classes.link} activeClassName="active" onClick={this.hideMobile}>

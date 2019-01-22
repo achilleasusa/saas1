@@ -8,27 +8,28 @@ export default {
     {
       name: 'Export List',
       url: '/exportlist',
-      icon: 'icon-home',
+      icon: 'fa fa-cloud-download',
     },
     {
       name: 'Get Updates',
       url: '/updates',
-      icon: 'icon-home'
+      icon: 'fa fa-rss'
     },
     {
       name: 'News',
       url: '/news',
-      icon: 'icon-drop',
+      icon: 'fa fa-newspaper-o',
     },
     {
       name: 'About Us',
       url: '/about',
-      icon: 'icon-drop',
+      icon: 'fa fa-address-book',
     },
     {
       name: 'Join',
       url: '/join',
-      icon: 'icon-drop',
+      icon: 'fa fa-sign-in',
     }
   ]
 };
+//fa fa-user-plus

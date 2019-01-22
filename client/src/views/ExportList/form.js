@@ -111,7 +111,7 @@ class ValidationForms extends React.Component {
   render() {
     return (
       <div className="animated fadeIn" >
-        <h4>To Export the List Subscribe to our Mailing List</h4>
+        
         <Formik
             initialValues={initialValues}
             validate={validate(validationSchema)}
@@ -132,7 +132,7 @@ class ValidationForms extends React.Component {
                 setTouched
             }) => (
                 <Row>
-                    <Form onSubmit={handleSubmit} noValidate name='simpleForm'>
+                    <Form onSubmit={handleSubmit} style={{width:"100%"}} noValidate name='simpleForm'>
                     <FormGroup>
                         <Label for="fullName">Full Name</Label>
                         <Input type="text"

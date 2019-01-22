@@ -23,7 +23,8 @@ class Full extends Component {
           <Sidebar {...this.props}/>
           <main className="main">
 
-            <Container fluid style = {{paddingTop:30}}>
+            <Container fluid style={{padding:0, height:"100%"}}>
+              {/* <div style = {{padding: 30, height:'100%', backgroundColor:"white", margin:10, borderRadius:10}}> */}
               <Switch>
                 <Route path="/home" name="Home" component={Home}/>
                 <Route path="/about" name="Home" component={About}/>
@@ -33,6 +34,7 @@ class Full extends Component {
                 <Route path="/news" name="Home" component={News}/>
                 <Redirect from="/" to="/home"/>
               </Switch>
+              {/* </div> */}
             </Container>
           </main>
           <Aside />
