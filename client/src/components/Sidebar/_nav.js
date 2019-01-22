@@ -3,32 +3,32 @@ export default {
     {
       name: 'Home',
       url: '/home',
-      icon: 'fas fa-home',
+      icon: 'icon-home',
     },
     {
       name: 'Export List',
       url: '/exportlist',
-      icon: 'fas fa-file-export',
+      icon: 'icon-home',
     },
     {
       name: 'Get Updates',
       url: '/updates',
-      icon: 'fab fa-mailchimp'
+      icon: 'icon-home'
     },
     {
       name: 'News',
       url: '/news',
-      icon: 'icon-news',
+      icon: 'icon-drop',
     },
     {
       name: 'About Us',
       url: '/about',
-      icon: 'icon-about',
+      icon: 'icon-drop',
     },
     {
       name: 'Join',
       url: '/join',
-      icon: 'join',
+      icon: 'icon-drop',
     }
   ]
 };

@@ -110,7 +110,7 @@ class ValidationForms extends React.Component {
 
   render() {
     return (
-      <div className="animated fadeIn">
+      <div className="animated fadeIn" >
         <h4>To Export the List Subscribe to our Mailing List</h4>
         <Formik
             initialValues={initialValues}
