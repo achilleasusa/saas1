@@ -16,11 +16,15 @@ import '../scss/core/_dropdown-menu-right.scss'
 
 // Containers
 import Full from './containers/Full/'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 
+library.add(faIgloo)
 ReactDOM.render((
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route path="/" name="Home" component={Full}/>
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 ), document.getElementById('root'));

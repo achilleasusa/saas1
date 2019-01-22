@@ -61,7 +61,7 @@ class MailchimpForm extends Component {
                       onChange={handleChange}
                       required
                       value={values.email} />
-              <FormFeedback>{errors.email}</FormFeedback>
+              <FormFeedback>errors.email</FormFeedback>
             </FormGroup>   
             <FormGroup>
               <Button 

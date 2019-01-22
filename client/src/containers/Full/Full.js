@@ -8,6 +8,11 @@ import Aside from '../../components/Aside/';
 import Footer from '../../components/Footer/';
 
 import Home from '../../views/Home';
+import Updates from '../../views/Updates';
+import News from '../../views/News';
+import Join from '../../views/Join';
+import Exportlist from '../../views/ExportList';
+import About from '../../views/About';
 
 class Full extends Component {
   render() {
@@ -17,10 +22,15 @@ class Full extends Component {
         <div className="app-body">
           <Sidebar {...this.props}/>
           <main className="main">
-            <Breadcrumb />
-            <Container fluid>
+
+            <Container fluid style = {{paddingTop:30}}>
               <Switch>
                 <Route path="/home" name="Home" component={Home}/>
+                <Route path="/about" name="Home" component={About}/>
+                <Route path="/join" name="Home" component={Join}/>
+                <Route path="/exportlist" name="Home" component={Exportlist}/>
+                <Route path="/updates" name="Home" component={Updates}/>
+                <Route path="/news" name="Home" component={News}/>
                 <Redirect from="/" to="/home"/>
               </Switch>
             </Container>

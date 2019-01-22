@@ -3,8 +3,8 @@ import EnhancedTable from '../../components/dataTable'
 class Home extends Component {
   render() {
     return (
-      <div className="animated fadeIn">
-        <h1>Fastest Growing Companies</h1>
+      <div className="animated fadeIn" style = {{textAlign:"center"}}>
+        <h1 style={{marginBottom: 20}}>Fastest Growing Companies</h1>
         <EnhancedTable />
       </div>
     );
