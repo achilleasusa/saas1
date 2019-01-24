@@ -2,23 +2,33 @@ import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import article_img from '../assets/img/article-background.jpg'
+//fa fa-tag
 class Article extends Component {
   render() {
     return (
-      <div style = {{textAlign: "center", display: "relative", width: 300, height: 400, padding: 10}}>
-        {/* <Card style={{width:200, height: 200, borderRadius: 20}}>
-          <CardImg top style={{width: 100, height: 400}} src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>         */}
-
-          <img src={article_img} width = "100%" style = {{height: 200, borderRadius: 10, borderRadius:20}}/>
-
-        <div style = {{display: "inline-block", margin: 'auto', width: 250, height: 200, marginTop: -40, borderRadius: 10, backgroundColor: "white"}}></div>
+      <div style = {{textAlign:"center", display: "relative", width: "30%", padding: 10}}>
+         <img src={article_img} width = "100%" style = {{height: 200, borderRadius: 10, borderRadius:10}}/>
+        <div style = {{textAlign:"left",padding:20, boxShadow: `rgba(0,0,0,.15) 0 7px 7px`, display: "inline-block", margin:'auto', width:"95%", height: 270, marginTop: -20, borderRadius: 10, backgroundColor: "white"}}>
+          <div style={{marginBottom:20}}><h3>Blog Title</h3></div>
+          <div style={{color: "grey", marginBottom:10}}>
+            <span style={{paddingRight:30}}>
+              <i className="fa fa-user"></i>
+              <span>  </span>
+              <span>Tom Blue</span>
+            </span>
+            <span>
+              <i className="fa fa-calendar"></i>
+              <span>  </span>
+              <span>April 19, 2019</span>
+            </span>            
+          </div>
+          <div>
+            <p style={{height:20}}>I recently beta-launched a free chrome extension that lets you find people’s emails and direct dial phone numbers. It also allows you to build an email cadence to do outbound cold emailing. When building this solution it allowed me to think about the top solutions in the space that can help us find someone’s work…</p>
+          </div>
+          <div>
+            <Button>READ MORE</Button>
+          </div>
+        </div>
       </div>
     )
   }

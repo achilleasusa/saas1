@@ -13,18 +13,18 @@ const validationSchema = function (values) {
     .min(1, `Last name has to be at least 1 character`)
     .required('Last name is required'),
     phone: Yup.string()
-    .min(5, `phone has to be at least 5 characters`)
-    .required('phone is required'),
+    .min(5, `Phone number has to be at least 5 characters`)
+    .required('Phone number is required'),
     email: Yup.string()
     .email('Invalid email address')
     .required('Email is required!'),
     password: Yup.string()
     .min(6, `Password has to be at least ${6} characters!`)
     .matches(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/, 'Password must contain: numbers, uppercase and lowercase letters\n')
-    .required('Password is required'),
+    .required('This field is required'),
     confirmPassword: Yup.string()
     .oneOf([values.password], 'Passwords must match')
-    .required('Password confirmation is required'),
+    .required('This field is required'),
     accept: Yup.bool()
     .required('* required')
     .test('accept', 'You have to accept our Terms and Conditions!', value => value === true),
@@ -134,7 +134,7 @@ class ValidationForms extends React.Component {
                 <Row>
                     <Form onSubmit={handleSubmit} style={{width:"100%"}} noValidate name='simpleForm'>
                     <FormGroup>
-                        <Label for="fullName">Full Name</Label>
+                        <Label for="fullName">Full Name <span className="text-danger">*</span></Label>
                         <Input type="text"
                                 name="fullName"
                                 id="fullName"
@@ -149,7 +149,7 @@ class ValidationForms extends React.Component {
                         <FormFeedback>{errors.fullName}</FormFeedback>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="email">Email Address</Label>
+                        <Label for="email">Email Address <span className="text-danger">*</span></Label>
                         <Input type="email"
                                 name="email"
                                 id="email"
@@ -163,7 +163,7 @@ class ValidationForms extends React.Component {
                         <FormFeedback>{errors.email}</FormFeedback>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="phone">Phone</Label>
+                        <Label for="phone">Phone Number <span className="text-danger">*</span></Label>
                         <Input type="text"
                                 name="phone"
                                 id="phone"
@@ -177,7 +177,7 @@ class ValidationForms extends React.Component {
                         <FormFeedback>{errors.phone}</FormFeedback>
                     </FormGroup>
                         <FormGroup>
-                            <Label for="password">Name one piece of data that you would like added to this list</Label>
+                            <Label for="password">Name one piece of data that you would like added to this list <span className="text-danger">*</span></Label>
                             <Input type="password"
                                     name="password"
                                     id="password"
@@ -192,7 +192,7 @@ class ValidationForms extends React.Component {
                             <FormFeedback>{errors.password}</FormFeedback>
                         </FormGroup>
                         <FormGroup>
-                            <Label for="confirmPassword">What other industries are you interested in? </Label>
+                            <Label for="confirmPassword">What other industries are you interested in? <strong className="text-danger">*</strong></Label>
                             <Input type="password"
                                     name="confirmPassword"
                                     id="confirmPassword"

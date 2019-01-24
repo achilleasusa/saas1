@@ -1,1 +1,7 @@
-const controller = require('../controllers').Blog;
+const apiRoute = require('./apis');
+exports.init = (server) => {
+  server.use('/api', apiRoute);
+}
+
+
+
