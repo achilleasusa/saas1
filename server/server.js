@@ -3,6 +3,35 @@ import compression from 'compression';
 import bodyParser from 'body-parser';
 import path from 'path';
 import routes from './routes'
+
+//Check ElasticSearch status
+var client = require('./elasticSearch.js');
+
+client.ping({
+  requestTimeout: 30000,
+}, function (error) {
+  if (error) {
+    console.error('elasticsearch cluster is down!');
+  } else {
+    console.log('All is well');
+  }
+});
+
+client.search({
+  index: 'index',
+  type: 'type',
+  body: {
+    query: {
+      wildcard: { "title": "*asd*" }
+    }
+  }
+}).then(function (resp) {
+    console.log(resp.hits.hits)
+}, function (err) {
+    console.trace(err.message);
+});
+
+
 var models = require('./models')
 models.sequelize.sync()
 .then(function(){
