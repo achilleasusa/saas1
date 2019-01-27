@@ -8,6 +8,15 @@ const addCompany = (values) => {
   //console.log(values)
   return instance.post('/companies', values)
 }
+const getCompanies = (order, orderBy, offset, rowsPerPage) => {
+  //console.log(order)
+  return instance.get('/companies', {params:{order, orderBy, offset, rowsPerPage}})
+}
+const getTotalCount = () => {
+  return instance.get('/companies/totalcount')
+}
 export default {
-  addCompany
+  addCompany,
+  getCompanies,
+  getTotalCount
 }

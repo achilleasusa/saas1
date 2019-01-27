@@ -17,19 +17,19 @@ client.ping({
   }
 });
 
-client.search({
-  index: 'index',
-  type: 'type',
-  body: {
-    query: {
-      wildcard: { "title": "*asd*" }
-    }
-  }
-}).then(function (resp) {
-    console.log(resp.hits.hits)
-}, function (err) {
-    console.trace(err.message);
-});
+// client.search({
+//   index: 'index',
+//   type: 'type',
+//   body: {
+//     query: {
+//       wildcard: { "title": "*asd*" }
+//     }
+//   }
+// }).then(function (resp) {
+//     console.log(resp.hits.hits)
+// }, function (err) {
+//     console.trace(err.message);
+// });
 
 
 var models = require('./models')
