@@ -13,6 +13,7 @@ import News from '../../views/News';
 import Join from '../../views/Join';
 import Exportlist from '../../views/ExportList';
 import About from '../../views/About';
+import CompanyDetail from '../../views/CompanyDetail'
 
 class Full extends Component {
   render() {
@@ -26,12 +27,13 @@ class Full extends Component {
             <Container fluid style={{padding:20, height:"100%"}}>
               {/* <div style = {{padding: 30, height:'100%', backgroundColor:"white", margin:10, borderRadius:10}}> */}
               <Switch>
-                <Route path="/home" name="Home" component={Home}/>
-                <Route path="/about" name="Home" component={About}/>
-                <Route path="/join" name="Home" component={Join}/>
-                <Route path="/exportlist" name="Home" component={Exportlist}/>
-                <Route path="/updates" name="Home" component={Updates}/>
-                <Route path="/news" name="Home" component={News}/>
+                <Route path="/home" name="Home" component={Home} exact={true}/>
+                <Route path="/about" name="About" component={About}/>
+                <Route path="/join" name="Join" component={Join}/>
+                <Route path="/exportlist" name="Exportlist" component={Exportlist}/>
+                <Route path="/home/:id" name="HomeDetail" component={CompanyDetail}/>
+                <Route path="/updates" name="Update" component={Updates}/>
+                <Route path="/news" name="News" component={News}/>
                 <Redirect from="/" to="/home"/>
               </Switch>
               {/* </div> */}

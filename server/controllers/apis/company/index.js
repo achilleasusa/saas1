@@ -29,6 +29,7 @@ router.post('/', (req, res, next)=>{
       id: created.id,
       body: {
         name: created.name,
+        id: created.id
       }
     });    
   })

@@ -142,10 +142,7 @@ class EnhancedTable extends React.Component {
    // console.log("order; orderBy", order, orderBy)
   };
   handleClick = (event, id) => {
-    const { selected } = this.state;
-    console.log("selected id:", id)
-    const selectedIndex = selected.indexOf(id);
-    //this.setState({ selected: newSelected });
+    this.props.onSelectCompany(id)
   };
 
   handleChangePage = (event, page) => {
@@ -158,27 +155,14 @@ class EnhancedTable extends React.Component {
 
     Postman.getCompanies(order, orderBy, offset, rowsPerPage)
           .then(res=>{
-            console.log(res)
             this.setState({tableData:res.data.data, pageCount: res.data.totalCount/rowsPerPage})
           })
   }
+
   componentDidMount(){
-    //Get Data
     this.getData();
   }
 
-  // shouldComponentUpdate(nextProps, nextState){
-  //   //console.log(nextState)
-  //   //return true
-  //   // if (!this.flag)
-  //   //   {this.flag=true; return true; }
-  //   //console.log("KKKKKKKKKKKKK")
-  //   return (this.state.orderBy != nextState.orderBy)||(this.state.offset != nextState.offset)||(this.state.order != nextState.order)||(this.state.tableData.length==0);
-
-  // }
-  // componentWillUpdate(){
-  //   this.getData();
-  // }
   handlePageClick = ({selected}) => {
     console.log("handlePageClick:", selected*this.state.rowsPerPage)
     this.setState({offset: selected*this.state.rowsPerPage}, ()=>{this.getData()})

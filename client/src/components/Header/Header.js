@@ -27,7 +27,6 @@ class Header extends Component {
     e.preventDefault();
     document.body.classList.toggle('aside-menu-hidden');
   }
-
   render() {
     return (
       <header className="app-header navbar">
