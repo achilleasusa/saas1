@@ -3,7 +3,7 @@ import EnhancedTable from '../../components/dataTable'
 import { Card, CardHeader, CardBody} from 'reactstrap';
 class Home extends Component {
   selectCompany = (id) => {
-    console.log("selected:", id)
+    //console.log("selected:", id)
     this.props.history.push(`/home/${id}`);
   }
   render() {

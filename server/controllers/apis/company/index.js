@@ -34,12 +34,13 @@ router.post('/', (req, res, next)=>{
     });    
   })
   .catch((error)=>{
-    console.log("HHHHHHHHH:", error)
+    //console.log("HHHHHHHHH:", error)
   })
 
 });
 
 router.get('/', async(req, res)=>{
+  console.log("UUUUUUUU")
   const { order, orderBy, offset, rowsPerPage} = req.query
   try {
     const data = await db.company.findAll({
@@ -54,8 +55,16 @@ router.get('/', async(req, res)=>{
     res.json({totalCount, data})
   
   } catch (error) {
-    console.log("error: ", error)
+    //console.log("error: ", error)
   }
+})
+router.get('/:id', async(req, res)=>{
+  //console.log("kkkkkkkkkk", req.params)
+  const id = req.params.id
+  db.company.findById(id)
+  .then((result) => {
+    res.json(result)
+  })
 })
 
 router.get('/totalcount', (req, res) => {

@@ -5,18 +5,22 @@ const instance = axios.create({
   headers: { 'content-type': 'application/json' },
 });
 const addCompany = (values) => {
-  //console.log(values)
+  ////console.log(values)
   return instance.post('/companies', values)
 }
 const getCompanies = (order, orderBy, offset, rowsPerPage) => {
-  //console.log(order)
+  ////console.log(order)
   return instance.get('/companies', {params:{order, orderBy, offset, rowsPerPage}})
 }
 const getTotalCount = () => {
   return instance.get('/companies/totalcount')
 }
+const getCompanyById = (id) => {
+  return instance.get(`/companies/${id}`)
+}
 export default {
   addCompany,
   getCompanies,
-  getTotalCount
+  getTotalCount,
+  getCompanyById
 }

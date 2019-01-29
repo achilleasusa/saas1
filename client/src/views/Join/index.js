@@ -86,12 +86,12 @@ class AddCompanyForm extends Component {
   onSubmit = (values, { setSubmitting, setErrors }) => {
   //   Postman.post('companies', {as:"asdf"})
   //   .then(function (response) {
-  //     console.log(response);
+  //     //console.log(response);
   //   })
   //   .catch(function (error) {
-  //     console.log(error);
+  //     //console.log(error);
   //   });    
-  //   console.log(values)
+  //   //console.log(values)
   //   //this.props.onSubmitted(values)
   Postman.addCompany(values).then((res)=>{
    this.createNotification('success')

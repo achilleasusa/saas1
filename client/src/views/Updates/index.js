@@ -21,7 +21,7 @@ class MailchimpForm extends Component {
    // this.touchAll = this.touchAll.bind(this)
   }
   onSubmit = (values, { setSubmitting, setErrors }) => {
-    console.log(values)
+    //console.log(values)
     this.props.onSubmitted(values)
   }
   render (){

@@ -139,7 +139,7 @@ class EnhancedTable extends React.Component {
     }
 
     this.setState({ order, orderBy }, ()=>this.getData());
-   // console.log("order; orderBy", order, orderBy)
+   // //console.log("order; orderBy", order, orderBy)
   };
   handleClick = (event, id) => {
     this.props.onSelectCompany(id)
@@ -164,7 +164,7 @@ class EnhancedTable extends React.Component {
   }
 
   handlePageClick = ({selected}) => {
-    console.log("handlePageClick:", selected*this.state.rowsPerPage)
+    //console.log("handlePageClick:", selected*this.state.rowsPerPage)
     this.setState({offset: selected*this.state.rowsPerPage}, ()=>{this.getData()})
   }
   render() {

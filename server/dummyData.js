@@ -39,7 +39,7 @@ export default function () {
 
     Post.create([post1, post2], (error) => {
       if (!error) {
-        // console.log('ready to go....');
+        // //console.log('ready to go....');
       }
     });
   });

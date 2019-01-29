@@ -24,9 +24,12 @@ class Searchbar extends Component {
           //style={{height:30}}
           onValueSelected={
             (value, cause, source) => {
-              //this.props.selectSearch(2)
-              this.props.history.push(`/home/${source.id}`);
-              //console.log('jjjjj:', this.props.selectSearch)
+              //console.log("lllllllll", this.props)
+              if (this.props.history.location.pathname.includes("/home/"))
+                {console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjj");this.props.match.params.id = source.id}
+              else
+                this.props.history.push(`/home/${source.id}`);
+              ////console.log('jjjjj:', this.props.selectSearch)
             }
           }
         />

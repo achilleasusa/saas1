@@ -13,7 +13,7 @@ client.ping({
   if (error) {
     console.error('elasticsearch cluster is down!');
   } else {
-    console.log('All is well');
+    //console.log('All is well');
   }
 });
 
@@ -26,7 +26,7 @@ client.ping({
 //     }
 //   }
 // }).then(function (resp) {
-//     console.log(resp.hits.hits)
+//     //console.log(resp.hits.hits)
 // }, function (err) {
 //     console.trace(err.message);
 // });
@@ -35,10 +35,10 @@ client.ping({
 var models = require('./models')
 models.sequelize.sync()
 .then(function(){
-  console.log()
+  //console.log()
 })
 .catch(function(err){
-  console.log(err, 'something went wrong with the database update!')
+  //console.log(err, 'something went wrong with the database update!')
 })
 
 // Initialize the Express App
@@ -65,7 +65,7 @@ routes.init(app);
 // start app
 app.listen(serverConfig.port, (error) => {
   if (!error) {
-    console.log(`MERN is running on port: ${serverConfig.port}! Build something amazing!`); // eslint-disable-line
+    //console.log(`MERN is running on port: ${serverConfig.port}! Build something amazing!`); // eslint-disable-line
   }
 });
 
